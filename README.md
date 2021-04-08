@@ -3,7 +3,4 @@
 * [政府資料開放平台](https://data.gov.tw/dataset/113195)
 * 資料型態：JSON
 ## 輸出
-```
-澎湖縣白沙鄉人口年齡層統計：
-從民國106年到民國110年，共4年50比資料。
-```
+![網頁截圖](https://i.imgur.com/eqxLPmW.png)
