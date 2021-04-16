@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace Dataprossing
+namespace Dataprossing.Models
 {
     static class Constants
     {
@@ -21,15 +21,15 @@ namespace Dataprossing
             //Console.WriteLine(json);
             //var options = new JsonSerializerOptions();
             //options.Converters.Add(new JsonStringEnumConverter());
-            var dataSet = Repository.readData(Constants.Filename);
-            var startingYear = Int32.Parse(dataSet[0].year);
-            var endingYear = Int32.Parse(dataSet[dataSet.Count - 1].year);
-
-            Console.WriteLine("從民國{0}年到民國{1}年，共{2}年{3}比資料。",
-                               startingYear,
-                               endingYear,
-                               endingYear - startingYear,
-                               dataSet.Count);
+            //var dataSet = Repository.readData(Constants.Filename);
+            //var startingYear = Int32.Parse(dataSet[0].year);
+            //var endingYear = Int32.Parse(dataSet[dataSet.Count - 1].year);
+            //
+            //Console.WriteLine("從民國{0}年到民國{1}年，共{2}年{3}比資料。",
+            //                   startingYear,
+            //                   endingYear,
+            //                   endingYear - startingYear,
+            //                   dataSet.Count);
         }
     }
 }

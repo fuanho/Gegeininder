@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
-using Dataprossing;
+using Dataprossing.Models;
 
 namespace DataprossingWeb.Controllers
 {
@@ -19,11 +19,11 @@ namespace DataprossingWeb.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
             string v = System.IO.Path.GetDirectoryName(".");
             var filename = @"C:\Users\fuanh\Documents\NKUST-109-2\DataprossingWeb\data.json";
-            List<PopulationAgeGroupInBaishaPenghu> data = Repository.readData(filename);
+            List<PopulationAgeGroupInBaishaPenghu> data = await Repository.readData(filename);
             return View(data);
         }
 

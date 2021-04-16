@@ -6,10 +6,14 @@ using System.Threading.Tasks;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace Dataprossing
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace Dataprossing.Models
 {
     public class PopulationAgeGroupInBaishaPenghu
     {
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int Id { get; set; }
         [JsonPropertyName("年度")]
         public string year { get; set; }
         [JsonPropertyName("月份")]

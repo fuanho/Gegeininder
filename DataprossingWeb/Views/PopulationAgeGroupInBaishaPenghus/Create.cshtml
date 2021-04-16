@@ -1,0 +1,143 @@
+﻿@model Dataprossing.Models.PopulationAgeGroupInBaishaPenghu
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>PopulationAgeGroupInBaishaPenghu</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="year" class="control-label"></label>
+                <input asp-for="year" class="form-control" />
+                <span asp-validation-for="year" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="month" class="control-label"></label>
+                <input asp-for="month" class="form-control" />
+                <span asp-validation-for="month" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="sum" class="control-label"></label>
+                <input asp-for="sum" class="form-control" />
+                <span asp-validation-for="sum" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="age0" class="control-label"></label>
+                <input asp-for="age0" class="form-control" />
+                <span asp-validation-for="age0" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="age1" class="control-label"></label>
+                <input asp-for="age1" class="form-control" />
+                <span asp-validation-for="age1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="age2" class="control-label"></label>
+                <input asp-for="age2" class="form-control" />
+                <span asp-validation-for="age2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="age3" class="control-label"></label>
+                <input asp-for="age3" class="form-control" />
+                <span asp-validation-for="age3" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="age4" class="control-label"></label>
+                <input asp-for="age4" class="form-control" />
+                <span asp-validation-for="age4" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="age5" class="control-label"></label>
+                <input asp-for="age5" class="form-control" />
+                <span asp-validation-for="age5" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="age6" class="control-label"></label>
+                <input asp-for="age6" class="form-control" />
+                <span asp-validation-for="age6" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="age7" class="control-label"></label>
+                <input asp-for="age7" class="form-control" />
+                <span asp-validation-for="age7" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="age8" class="control-label"></label>
+                <input asp-for="age8" class="form-control" />
+                <span asp-validation-for="age8" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="age9" class="control-label"></label>
+                <input asp-for="age9" class="form-control" />
+                <span asp-validation-for="age9" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="age10" class="control-label"></label>
+                <input asp-for="age10" class="form-control" />
+                <span asp-validation-for="age10" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="age11" class="control-label"></label>
+                <input asp-for="age11" class="form-control" />
+                <span asp-validation-for="age11" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="age12" class="control-label"></label>
+                <input asp-for="age12" class="form-control" />
+                <span asp-validation-for="age12" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="age13" class="control-label"></label>
+                <input asp-for="age13" class="form-control" />
+                <span asp-validation-for="age13" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="age14" class="control-label"></label>
+                <input asp-for="age14" class="form-control" />
+                <span asp-validation-for="age14" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="age15" class="control-label"></label>
+                <input asp-for="age15" class="form-control" />
+                <span asp-validation-for="age15" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="age16" class="control-label"></label>
+                <input asp-for="age16" class="form-control" />
+                <span asp-validation-for="age16" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="age17" class="control-label"></label>
+                <input asp-for="age17" class="form-control" />
+                <span asp-validation-for="age17" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="age18" class="control-label"></label>
+                <input asp-for="age18" class="form-control" />
+                <span asp-validation-for="age18" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="age19" class="control-label"></label>
+                <input asp-for="age19" class="form-control" />
+                <span asp-validation-for="age19" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
