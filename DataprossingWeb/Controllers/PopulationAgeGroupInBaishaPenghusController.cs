@@ -14,12 +14,23 @@ namespace DataprossingWeb
     {
         public async Task<IActionResult> Import()
         {
-            var filename = @"C:\Users\fuanh\Documents\NKUST-109-2\DataprossingWeb\data.json";
+            var filename = @"data.json";
             List<PopulationAgeGroupInBaishaPenghu> populationAgeGroupInBaishaPenghus = await Dataprossing.Models.Repository.readData(filename);
             populationAgeGroupInBaishaPenghus.ForEach(data =>
             {
                 _context.PopulationAgeGroupInBaishaPenghus.Add(data);
             });
+            _context.SaveChanges();
+            return RedirectToAction(nameof(Index));
+        }
+
+        public IActionResult DeleteAll()
+        {
+            DbSet<PopulationAgeGroupInBaishaPenghu> datas = _context.PopulationAgeGroupInBaishaPenghus;
+            foreach (PopulationAgeGroupInBaishaPenghu data in datas)
+            {
+                datas.Remove(data);
+            }
             _context.SaveChanges();
             return RedirectToAction(nameof(Index));
         }
@@ -32,10 +43,18 @@ namespace DataprossingWeb
         }
 
         // GET: PopulationAgeGroupInBaishaPenghus
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string? year)
         {
-            await Import();
-            return View(await _context.PopulationAgeGroupInBaishaPenghus.ToListAsync());
+            List<PopulationAgeGroupInBaishaPenghu> datas;
+            if (year == null)
+            {
+                datas = await _context.PopulationAgeGroupInBaishaPenghus.ToListAsync();
+            }
+            else
+            {
+                datas = _context.PopulationAgeGroupInBaishaPenghus.Where(PopulationAgeGroupInBaishaPenghu => PopulationAgeGroupInBaishaPenghu.year == year).ToList();
+            }
+            return View(datas);
         }
 
         // GET: PopulationAgeGroupInBaishaPenghus/Details/5

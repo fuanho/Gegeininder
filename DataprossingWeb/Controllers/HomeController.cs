@@ -22,7 +22,7 @@ namespace DataprossingWeb.Controllers
         public async Task<IActionResult> Index()
         {
             string v = System.IO.Path.GetDirectoryName(".");
-            var filename = @"C:\Users\fuanh\Documents\NKUST-109-2\DataprossingWeb\data.json";
+            var filename = @"data.json";
             List<PopulationAgeGroupInBaishaPenghu> data = await Repository.readData(filename);
             return View(data);
         }

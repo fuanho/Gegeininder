@@ -5,9 +5,23 @@
 }
 
 <h1>Index</h1>
+
 <p>
     <a asp-action="Create">Create New</a>
 </p>
+<p>
+    <a asp-action="Import">Import Datas</a>
+</p>
+<p>
+    <a asp-action="DeleteAll">Delete All Datas</a>
+</p>
+
+
+<form asp-action="Index" method="get" style="margin:16px">
+    年份：<input type="text" name="year" />
+    <input type="submit" value="搜尋" />
+</form>
+
 <table class="table">
     <thead>
         <tr>
@@ -84,83 +98,84 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.year)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.month)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.sum)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.age0)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.age1)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.age2)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.age3)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.age4)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.age5)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.age6)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.age7)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.age8)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.age9)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.age10)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.age11)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.age12)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.age13)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.age14)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.age15)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.age16)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.age17)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.age18)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.age19)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.year)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.month)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.sum)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.age0)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.age1)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.age2)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.age3)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.age4)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.age5)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.age6)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.age7)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.age8)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.age9)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.age10)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.age11)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.age12)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.age13)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.age14)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.age15)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.age16)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.age17)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.age18)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.age19)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
