@@ -3,44 +3,18 @@
     ViewData["Title"] = "Home Page";
 }
 
-<h1>Population Age Group in Baisha Penghu</h1>
-<table style="width:100%" border="1">
-    <tr>
-        <th>年度</th>
-        <th>月份</th>
-        @for (int i = 0; i < 100; i += 5)
-        {
-            <th>年齡@(i)~@(i + 4)</th>
-        }
-        <th>總計</th>
-    </tr>
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>@item.year</td>
-            <td>@item.month</td>
-            <td>@item.age0</td>
-            <td>@item.age1</td>
-            <td>@item.age2</td>
-            <td>@item.age3</td>
-            <td>@item.age4</td>
-            <td>@item.age5</td>
-            <td>@item.age6</td>
-            <td>@item.age7</td>
-            <td>@item.age8</td>
-            <td>@item.age9</td>
-            <td>@item.age10</td>
-            <td>@item.age11</td>
-            <td>@item.age12</td>
-            <td>@item.age13</td>
-            <td>@item.age14</td>
-            <td>@item.age15</td>
-            <td>@item.age16</td>
-            <td>@item.age17</td>
-            <td>@item.age18</td>
-            <td>@item.age19</td>
-            <td>@item.sum</td>
-        </tr>
-    }
-</table>
-@*<h2>@Model.ToList()[0].age0</h2>*@
+<h1 id="-">澎湖縣白沙鄉人口年齡層統計</h1>
+
+<h2 id="-">資料來源</h2>
+<ul>
+    <li><a href="https://data.gov.tw/dataset/113195">政府資料開放平台</a></li>
+    <li>資料型態：JSON</li>
+</ul>
+
+<h2 id="-">網站原始碼</h2>
+<ul>
+    <li><a href="https://github.com/fuanho/NKUST-109-2">GitHub</a></li>
+</ul>
+
+<h2 id="api-">Api使用說明</h2>
+<p>在原網址後加上<code>/api/{year}</code> or <code>/api/{year}/{month}</code></p>

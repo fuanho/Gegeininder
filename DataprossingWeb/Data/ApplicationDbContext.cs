@@ -4,7 +4,6 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using Dataprossing.Models;
-using Microsoft.EntityFrameworkCore;
 
 namespace DataprossingWeb.Data
 {
