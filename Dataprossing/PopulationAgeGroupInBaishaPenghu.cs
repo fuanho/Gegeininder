@@ -15,54 +15,60 @@ namespace Dataprossing.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         [JsonPropertyName("年度")]
-        public string year { get; set; }
+        public int year { get; set; }
         [JsonPropertyName("月份")]
-        public string month { get; set; }
+        public int month { get; set; }
         [JsonPropertyName("總計")]
-        public string sum { get; set; }
+        public int sum { get; set; }
         [JsonPropertyName("年齡：０-４歲")]
-        public string age0 { get; set; }
+        public int age0 { get; set; }
         [JsonPropertyName("年齡：５-９歲")]
-        public string age1 { get; set; }
+        public int age1 { get; set; }
         [JsonPropertyName("年齡：１０-１４歲")]
-        public string age2 { get; set; }
+        public int age2 { get; set; }
         [JsonPropertyName("年齡：１５-１９歲")]
-        public string age3 { get; set; }
+        public int age3 { get; set; }
         [JsonPropertyName("年齡：２０-２４歲")]
-        public string age4 { get; set; }
+        public int age4 { get; set; }
         [JsonPropertyName("年齡：２５-２９歲")]
-        public string age5 { get; set; }
+        public int age5 { get; set; }
         [JsonPropertyName("年齡：３５-３９歲")]
-        public string age6 { get; set; }
+        public int age6 { get; set; }
         [JsonPropertyName("年齡：４０-４４歲")]
-        public string age7 { get; set; }
+        public int age7 { get; set; }
         [JsonPropertyName("年齡：４５-４９歲")]
-        public string age8 { get; set; }
+        public int age8 { get; set; }
         [JsonPropertyName("年齡：５０-５４歲")]
-        public string age9 { get; set; }
+        public int age9 { get; set; }
         [JsonPropertyName("年齡：５５-５９歲")]
-        public string age10 { get; set; }
+        public int age10 { get; set; }
         [JsonPropertyName("年齡：６０-６４歲")]
-        public string age11 { get; set; }
+        public int age11 { get; set; }
         [JsonPropertyName("年齡：６５-６９歲")]
-        public string age12 { get; set; }
+        public int age12 { get; set; }
         [JsonPropertyName("年齡：７０-７４歲")]
-        public string age13 { get; set; }
+        public int age13 { get; set; }
         [JsonPropertyName("年齡：７５-７９歲")]
-        public string age14 { get; set; }
+        public int age14 { get; set; }
         [JsonPropertyName("年齡：８０-８４歲")]
-        public string age15 { get; set; }
+        public int age15 { get; set; }
         [JsonPropertyName("年齡：８５-８９歲")]
-        public string age16 { get; set; }
+        public int age16 { get; set; }
         [JsonPropertyName("年齡：９０-９４歲")]
-        public string age17 { get; set; }
+        public int age17 { get; set; }
         [JsonPropertyName("年齡：９５-９９歲")]
-        public string age18 { get; set; }
+        public int age18 { get; set; }
         [JsonPropertyName("年齡：100歲以上")]
-        public string age19 { get; set; }
+        public int age19 { get; set; }
 
-        public PopulationAgeGroupInBaishaPenghu(string year, string month, string sum, string age0, string age1, string age2, string age3, string age4, string age5, string age6, string age7, string age8, string age9, string age10, string age11, string age12, string age13, string age14, string age15, string age16, string age17, string age18, string age19)
+        public PopulationAgeGroupInBaishaPenghu()
         {
+
+        }
+
+        public PopulationAgeGroupInBaishaPenghu(int id, int year, int month, int sum, int age0, int age1, int age2, int age3, int age4, int age5, int age6, int age7, int age8, int age9, int age10, int age11, int age12, int age13, int age14, int age15, int age16, int age17, int age18, int age19)
+        {
+            Id = id;
             this.year = year;
             this.month = month;
             this.sum = sum;

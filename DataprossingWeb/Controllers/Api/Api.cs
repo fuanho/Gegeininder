@@ -23,7 +23,7 @@ namespace DataprossingWeb.Controllers.Api
 
         [HttpGet]
         [Route("{year?}/{month?}")]
-        public Task<List<PopulationAgeGroupInBaishaPenghu>> GetPopulationAgeGroupInBaishaPenghus(string? year, string? month)
+        public Task<List<PopulationAgeGroupInBaishaPenghu>> GetPopulationAgeGroupInBaishaPenghus(int? year, int? month)
         {
             IQueryable<PopulationAgeGroupInBaishaPenghu> query = 
                 dbContext.PopulationAgeGroupInBaishaPenghus.AsQueryable();
