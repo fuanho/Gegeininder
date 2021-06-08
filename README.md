@@ -21,6 +21,7 @@ Data 頁面
 ![Data page](https://i.imgur.com/9jq2tUi.png)
 ![Data details](https://i.imgur.com/t4l6N4S.png)
 ![Edit data](https://i.imgur.com/4VRfnyU.png)
+![Delete data](https://i.imgur.com/5sbpKm0.png)
 
 Api 使用  
 ![Api年份](https://i.imgur.com/2iqpZ6c.png)
