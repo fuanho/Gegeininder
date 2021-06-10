@@ -1,10 +1,10 @@
-﻿using Dataprossing;
+﻿using DataprossingWeb;
 using System;
 using System.Collections.Generic;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace Dataprossing.Models
+namespace DataprossingWeb.Models
 {
     static class Constants
     {

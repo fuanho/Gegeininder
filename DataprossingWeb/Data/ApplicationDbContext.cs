@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
-using Dataprossing.Models;
+using DataprossingWeb.Models;
 
 namespace DataprossingWeb.Data
 {

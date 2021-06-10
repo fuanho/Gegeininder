@@ -6,7 +6,7 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
-namespace Dataprossing.Models
+namespace DataprossingWeb.Models
 {
     public class Int32Converter : System.Text.Json.Serialization.JsonConverter<int>
     {

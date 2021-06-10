@@ -1,26 +1,32 @@
-﻿@model IEnumerable<Dataprossing.Models.PopulationAgeGroupInBaishaPenghu>
+﻿@model IEnumerable<DataprossingWeb.Models.PopulationAgeGroupInBaishaPenghu>
 @{
     ViewData["Title"] = "Home Page";
 }
 
-<h1 id="-">澎湖縣白沙鄉人口年齡層統計</h1>
-<hr>
-<h2 id="-">資料來源</h2>
-<ul>
-    <li><a href="https://data.gov.tw/dataset/113195">政府資料開放平台</a></li>
-    <li>資料型態：JSON</li>
-</ul>
-<h2 id="-">網站原始碼</h2>
-<ul>
-    <li><a href="https://github.com/fuanho/NKUST-109-2">GitHub</a></li>
-</ul>
-<h2 id="api-">Api使用說明</h2>
-<p>在原網址後加上<code>/api/{year}</code> or <code>/api/{year}/{month}</code></p>
-<h2 id="-">圖片展示</h2>
-<p>
-    <img src="https://i.imgur.com/bFbPHST.png" alt="資料顯示">
-    <img src="https://i.imgur.com/2iqpZ6c.png" alt="Api年份">
-    <img src="https://i.imgur.com/GPntqnn.png" alt="Api年份加月份">
-</p>
+<style>
+    body {
+        background-image: url('https://i.imgur.com/qlCEyHj.gif');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+        color:white
+    }
+</style>
+<body>
+    <h1 id="-">
+        澎湖縣白沙鄉人口年齡層統計
+    </h1>
+    <hr>
 
-
+    <h2 id="-">資料來源</h2>
+    <ul>
+        <li><a href="https://data.gov.tw/dataset/113195">政府資料開放平台</a></li>
+        <li>資料型態：JSON</li>
+    </ul>
+    <h2 id="-">網站原始碼</h2>
+    <ul>
+        <li><a href="https://github.com/fuanho/NKUST-109-2">GitHub</a></li>
+    </ul>
+    <h2 id="api-">Api使用說明</h2>
+    <p>在原網址後加上<code>/api/{year}</code> or <code>/api/{year}/{month}</code></p>
+</body>

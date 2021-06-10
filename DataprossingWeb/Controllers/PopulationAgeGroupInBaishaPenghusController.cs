@@ -5,8 +5,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using Dataprossing.Models;
+using DataprossingWeb.Models;
 using DataprossingWeb.Data;
+using PagedList;
 
 namespace DataprossingWeb
 {
@@ -21,7 +22,7 @@ namespace DataprossingWeb
         public async Task<IActionResult> Import()
         {
             var filename = @"data.json";
-            List<PopulationAgeGroupInBaishaPenghu> populationAgeGroupInBaishaPenghus = await Dataprossing.Models.Repository.readData(filename);
+            List<PopulationAgeGroupInBaishaPenghu> populationAgeGroupInBaishaPenghus = await DataprossingWeb.Models.Repository.readData(filename);
             populationAgeGroupInBaishaPenghus.ForEach(data =>
             {
                 _context.PopulationAgeGroupInBaishaPenghus.Add(data);
@@ -42,21 +43,24 @@ namespace DataprossingWeb
         }
 
         // GET: PopulationAgeGroupInBaishaPenghus
-        public async Task<IActionResult> Index(int? year)
+        public ViewResult Index(int? year, int? pageNumber)
         {
-            List<PopulationAgeGroupInBaishaPenghu> datas;
+            //List<PopulationAgeGroupInBaishaPenghu> datas;
+            var datas = from i in _context.PopulationAgeGroupInBaishaPenghus select i;
+            
             if (year == null)
             {
                 // datas = await _context.PopulationAgeGroupInBaishaPenghus.ToListAsync();
-                datas = _context.PopulationAgeGroupInBaishaPenghus.Where(p => p.year == 106).ToList();
-                datas = datas.OrderBy(d => d.month).ToList();
+                //datas = _context.PopulationAgeGroupInBaishaPenghus.Where(p => p.year == 106).ToList();
+                datas = datas.OrderBy(d => d.Id);
             }
             else
             {
-                datas = _context.PopulationAgeGroupInBaishaPenghus.Where(p => p.year == year).ToList();
-                datas = datas.OrderBy(d => d.month).ToList();
+                pageNumber = 1;
+                datas = _context.PopulationAgeGroupInBaishaPenghus.Where(p => p.year == year);
+                datas = datas.OrderBy(d => d.month);
             }
-            return View(datas);
+            return View(datas.ToPagedList(pageNumber ?? 1, 12));
         }
 
         // GET: PopulationAgeGroupInBaishaPenghus/Details/5
