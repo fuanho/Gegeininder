@@ -10,21 +10,22 @@
 * [GitHub](https://github.com/fuanho/NKUST-109-2)
 
 ## Api使用說明  
-在原網址後加上``/api/{year}`` or ``/api/{year}/{month}``
+#### 在原網址後加上``/api/{year}`` or ``/api/{year}/{month}``
 
 ## 圖片展示
 
-首頁  
+### 首頁  
 ![Home page](https://i.imgur.com/X9Vbang.png)
 
-Data 頁面  
+### Data 頁面  
 ![Data page](https://i.imgur.com/9jq2tUi.png)
 ![Data details](https://i.imgur.com/t4l6N4S.png)
 ![Edit data](https://i.imgur.com/4VRfnyU.png)
 ![Delete data](https://i.imgur.com/5sbpKm0.png)
 ![Create data](https://i.imgur.com/hicDshV.png)
 
-Api 使用  
+
+### Api 使用  
 ![Api年份](https://i.imgur.com/2iqpZ6c.png)
 ![Api年份加月份](https://i.imgur.com/GPntqnn.png)
-
+![](https://i.imgur.com/qlCEyHj.gif)
